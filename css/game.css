@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "VT323", monospace;
+    color: white;
+}
+.body{
+    background-color: black;
+}
+.container{
+    background-color: black;
+    height: 100vh;
+    padding: 30px;
+    
+}
+.container .time{
+    text-align: center;
+    
+    width: 200px;
+    margin: 10px auto;
+    background-color: rgb(221, 55, 63, 50%);
+    font-size: 2rem;
+    padding: 15px;
+}
+.game{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.row{
+    display: flex;
+    gap: 3rem;
+}
+.cards{
+    background-image: url(../img/fundo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: red;
+    height: 110px;
+    width: 90px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid red;
+}
