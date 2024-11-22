@@ -4,6 +4,7 @@
     margin: 0;
     font-family: "VT323", monospace;
     color: white;
+    text-decoration: none;
 }
 .container{
     height: 100vh;
