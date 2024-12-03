@@ -13,7 +13,14 @@
     height: 100vh;
     padding: 30px;
     position: relative;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza no eixo horizontal */
+    justify-content: center; /* Centraliza no eixo vertical */
+    padding: 0; /* Remove espaçamento interno */
+    margin: 0; /* Remove espaçamento externo */
+    width: 100vw; /* Garante largura total da tela */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
 }
 .container .time{
     text-align: center;
@@ -25,16 +32,20 @@
     padding: 15px;
 }
 .game{
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os cards */
+
+    gap: 10px; /* Espaçamento entre os cards */
+    max-width: 545px; /* 5 cards * largura do card (90px) + gaps */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.row{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-}
-.row{
-    display: flex;
-    gap: 3rem;
 }
 .cards{
     position: relative;
