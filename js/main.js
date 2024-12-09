@@ -3,34 +3,34 @@ const number = document.querySelector("#number");
 const vader = document.querySelectorAll(".vader");
 const game = document.querySelector(".game")
 const cards = document.querySelectorAll(".cards");
-const body = document.querySelector("#body")
+const body = document.querySelector("#body");
+const result = document.querySelector(".result");
+const resultNumber = document.querySelector("#result-number");
 
-const arrayCards = Array.from(cards)
+
 // funções
 
-function shuffleCards(){
-    const shuffledCards = shuffleArray(arrayCards)
-    shuffledCards.forEach(card => game.appendChild(card))
+function shuffleCards() {
+    const cardsArray = document.querySelectorAll(".cards"); // Seleciona todas as cartas
+    cardsArray.forEach(card => {
+        card.style.order = Math.floor(Math.random() * 100); // Define uma ordem aleatória
+    });
 }
-function shuffleArray(array){
-    for (let i = array.length - 1; i > 0; i--) {
-        const randomIndex = Math.floor(Math.random() * (i + 1));
-        [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
-    }
-    return array;
-} 
 function timeNumber(){
     let numberInt = Number(number.textContent);
     setTimeout(() => {
         const interval = setInterval(() => {
-            if (numberInt >= 200) { // Condição de parada
+            const matchedCards = document.querySelectorAll(".cards.matched")
+            if (cards.length == matchedCards.length) { // Condição de parada
                 clearInterval(interval); // Para o incremento
+                result.style.display = "block";
+                resultNumber.innerHTML = numberInt
                 console.log("Finalizado:", numberInt);
             } else {
                 numberInt += 1; // Incrementa o valor
                 number.innerHTML = numberInt // Mostra o valor atual
             }
-        }, 1000); // Incrementa a cada 50ms
+        }, 1000); 
     }, 1000); // Aguarda 1 segundo antes de começar
 }
 
@@ -71,6 +71,6 @@ function checkCards(){
     };
 // eventos
 window.addEventListener('load', ()=>{
-    timeNumber(),
-    shuffleCards()
+    shuffleCards(),
+    timeNumber()
 });
