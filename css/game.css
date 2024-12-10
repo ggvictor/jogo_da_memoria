@@ -142,3 +142,23 @@ div.result{
 .reiniciar:hover{
     opacity: 1;
 }
+@media (max-width: 500px){
+    .cards{
+        height: 70px;
+        width: 50px;
+        
+    
+    }
+    .card-front,
+    .card-back {
+        
+        height: 70px;
+        width: 50px;
+        
+    }
+    .row{
+        display: flex;
+        flex-direction:row;
+        gap: 1rem;
+    }
+}

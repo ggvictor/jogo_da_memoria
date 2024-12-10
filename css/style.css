@@ -35,3 +35,8 @@
 .container button:hover{
     opacity: 1;
 }
+@media (max-width:500px){
+    .container img{
+        height: 300px;
+    }
+}
