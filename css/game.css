@@ -142,7 +142,7 @@ div.result{
 .reiniciar:hover{
     opacity: 1;
 }
-@media (max-width: 500px){
+@media (max-width: 650px){
     .cards{
         height: 70px;
         width: 50px;
